@@ -17,8 +17,8 @@ for contacts in contacts_list:
     # pprint(phone_list)
     if phone_list:
         contacts[5] = ''.join(x[0] for x in phone_list[1:12])
-        contacts[5] = f"+7({contacts[5][:3]}){contacts[5][3:6]
-                                              }-{contacts[5][6:8]}-{contacts[5][8:10]}"
+        contacts[5] = f"+7({contacts[5][:3]}){
+            contacts[5][3:6]}-{contacts[5][6:8]}-{contacts[5][8:10]}"
         if len(phone_list) == 12:
             contacts[5] += ' доб.' + \
                 re.search(r'\d+', phone_list[11][1]).group()
